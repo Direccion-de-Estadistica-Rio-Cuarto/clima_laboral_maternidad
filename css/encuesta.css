@@ -242,6 +242,10 @@ select.campo {
 abbr[title] { text-decoration: none; }
 /* NS/NC y Otro debajo de una escala (Likert, NPS) */
 .opciones--extras { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .65rem; }
+/* Máximo de casillas alcanzado (data-max): las opciones sin marcar quedan bloqueadas */
+.opcion--bloqueada { opacity: .5; cursor: not-allowed; }
+.opcion--bloqueada input { cursor: not-allowed; }
+.pregunta__limite { margin: .6rem 0 0; font-size: .9rem; font-weight: 600; color: var(--texto-suave); }
 .opciones--extras .opcion { min-height: 2.5rem; padding: .4rem .85rem; font-size: .92rem; }
 .opciones--extras .opcion--otro:has(input:checked) { flex: 1 1 100%; }
 /* «Otro» en una lista desplegable */
