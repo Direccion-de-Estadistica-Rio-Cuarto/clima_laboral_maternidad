@@ -352,6 +352,8 @@
       if (!el.classList.contains('seccion')) el.hidden = !visible;
       $$('input, select, textarea', el).forEach(function (c) { c.disabled = !visible; });
     });
+    // 1b) Máximo de casillas (data-max): al llegar al límite se bloquean las que faltan
+    aplicarLimites();
     // 2) «Otro» en opciones: el texto se despliega y habilita solo si está marcado
     $$('.opcion--otro').forEach(function (o) {
       var marca = o.querySelector('input[type="radio"], input[type="checkbox"]');
@@ -372,6 +374,37 @@
         if (chk.disabled) return;
         c.disabled = chk.checked;
       });
+    });
+  }
+
+  // data-max en selección múltiple: no deja marcar más casillas que el máximo.
+  // Al llegar al límite, las casillas sin marcar se deshabilitan y aparece un aviso;
+  // al desmarcar una, se vuelven a habilitar. NS/NC no cuenta para el límite.
+  function aplicarLimites() {
+    $$('.pregunta[data-max]').forEach(function (p) {
+      var max = +p.dataset.max;
+      var casillas = $$('.opciones input[type="checkbox"]', p).filter(function (c) { return c.value !== 'ns_nc'; });
+      if (!max || !casillas.length) return;
+      // Si la pregunta está oculta por una condicional, sus casillas ya quedaron deshabilitadas
+      var cond = p.closest('[data-mostrar-si]');
+      if (cond && !cumple(cond.dataset.mostrarSi)) return;
+      var marcadas = casillas.filter(function (c) { return c.checked; }).length;
+      var lleno = marcadas >= max;
+      casillas.forEach(function (c) {
+        var bloquear = lleno && !c.checked;
+        c.disabled = bloquear;
+        c.closest('.opcion').classList.toggle('opcion--bloqueada', bloquear);
+      });
+      var aviso = p.querySelector(':scope > .pregunta__limite');
+      if (!aviso) {
+        aviso = doc.createElement('p');
+        aviso.className = 'pregunta__limite';
+        aviso.setAttribute('aria-live', 'polite');
+        var ancla = p.querySelector('.opciones');
+        ancla.after(aviso);
+      }
+      aviso.hidden = !lleno;
+      aviso.textContent = lleno ? 'Llegaste al máximo de ' + max + (max === 1 ? ' opción' : ' opciones') + '. Para elegir otra, primero desmarcá una.' : '';
     });
   }
 
