@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encuesta de Clima Laboral 2026 · Maternidad Hortensia Gardey de Kowalk</title>
+  <meta name="description" content="Encuesta anónima de clima laboral del personal de la Maternidad Hortensia Gardey de Kowalk, Gobierno de Río Cuarto.">
+  <link rel="stylesheet" href="css/fuentes.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/tokens-encuesta.css">
+  <link rel="stylesheet" href="css/encuesta.css">
+  <script src="js/tema.js"></script>
+</head>
+<body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <img class="logo" src="assets/img/logo-gobierno.webp" alt="Gobierno de Río Cuarto">
+      <span class="separador" aria-hidden="true"></span>
+      <div class="titulos">
+        <p class="titulos__principal">Sec. Gestión y Participación Ciudadana</p>
+        <p class="titulos__secundario">Dir. de Estadística, Control de Calidad y Procesos</p>
+      </div>
+      <div class="encabezado-acciones">
+        <button type="button" class="boton-tema" id="boton-tema" aria-label="Cambiar entre modo claro y oscuro">
+          <svg class="icono-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+          <svg class="icono-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor">
+
+    <!-- ============ TÍTULO + MODO ============ -->
+    <div class="encuesta-titulo">
+      <div>
+        <h1 class="titulo-xl">Encuesta de Clima Laboral 2026</h1>
+        <p class="encuesta-subtitulo">Maternidad Hortensia Gardey de Kowalk · Gobierno de Río Cuarto</p>
+      </div>
+      <!-- Alterna entre una sección por vez y el formulario completo (lo maneja js/encuesta.js) -->
+      <button type="button" class="boton boton--secundario boton-modo" data-accion="modo" form="encuesta" aria-pressed="false">
+        <svg class="icono icono-completo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="7" rx="1.5"/><rect x="4" y="13" width="16" height="7" rx="1.5"/></svg>
+        <svg class="icono icono-pasos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="5" width="10" height="14" rx="1.5"/><path d="M3 7v10M21 7v10"/></svg>
+        <span data-texto-modo>Ver formulario completo</span>
+      </button>
+    </div>
+
+    <!-- ============ PANELES DE APERTURA ============
+         data-portada: se ven solo al abrir la encuesta (primera sección o formulario completo) -->
+    <div class="portada" data-portada>
+      <ul class="chips" aria-label="Datos del formulario">
+        <li class="chip">
+          <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          Código: FO-SGC-05-IDI.11
+        </li>
+        <li class="chip">
+          <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10c-4-1.5-7-5.5-7-10V6z"/><path d="m9 12l2 2l4-4"/></svg>
+          Anónima y confidencial (k-anonimato n ≥ 5)
+        </li>
+        <li>
+          <button type="button" class="boton boton--sutil boton-protocolo" data-abrir-modal="protocolo">
+            <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10c-4-1.5-7-5.5-7-10V6z"/><rect x="9.5" y="11" width="5" height="4" rx="1"/><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/></svg>
+            Ver protocolo técnico de anonimato
+          </button>
+        </li>
+        <li class="chip chip--norma"><span class="chip__punto" aria-hidden="true"></span>Sistema de Gestión de Calidad · <button type="button" class="enlace-norma" data-abrir-modal="decreto-1681">Decreto N° 1681/2023</button></li>
+      </ul>
+
+      <div class="aviso aviso--info" role="note">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 17h2v-6h-2zm1-8q.43 0 .71-.29T13 8t-.29-.71T12 7t-.71.29T11 8t.29.71T12 9m0 13q-2.07 0-3.9-.79t-3.17-2.14T2.79 15.9T2 12t.79-3.9t2.14-3.17T8.1 2.79T12 2t3.9.79t3.17 2.14t2.14 3.17T22 12t-.79 3.9t-2.14 3.17t-3.17 2.14T12 22"/></svg>
+        <div>
+          <p class="aviso__titulo">Propósito</p>
+          <p>Esta encuesta forma parte del Sistema de Gestión de Calidad y Procesos. Su objetivo es conocer cómo percibís tu lugar de trabajo, para identificar fortalezas y oportunidades de mejora.</p>
+          <ul>
+            <li><strong>Es anónima y confidencial.</strong></li>
+            <li><strong>Tu participación es voluntaria</strong>, pero muy importante para que los resultados reflejen la realidad del área.</li>
+            <li><strong>La información será usada solo con fines de diagnóstico y mejora.</strong></li>
+          </ul>
+          <p><strong>Tu aporte es muy valioso. ¡Gracias por participar!</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aparece si hay un borrador guardado en el dispositivo -->
+    <div class="aviso aviso--alerta" id="aviso-borrador" role="status" hidden>
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 21L12 2l11 19zm11-3q.43 0 .71-.29T13 17t-.29-.71T12 16t-.71.29T11 17t.29.71T12 18m-1-3h2v-5h-2z"/></svg>
+      <div>
+        <p class="aviso__titulo">Retomamos donde dejaste</p>
+        <p>Recuperamos las respuestas que habías empezado. <button type="button" class="boton boton--sutil boton--chico" data-accion="descartar">Empezar de nuevo</button></p>
+      </div>
+    </div>
+
+    <!-- ============ PROGRESO ============ -->
+    <div class="progreso">
+      <div class="progreso__info"><strong data-paso>Sección 1 de 7</strong><span data-porcentaje>0% completado</span></div>
+      <div class="progreso__barra" role="progressbar" aria-label="Avance de la encuesta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progreso__relleno"></div>
+      </div>
+    </div>
+
+    <!-- ============ FORMULARIO ============
+         data-encuesta: identificador · data-codigo-formulario: código del SGC
+         data-endpoint: URL que recibe un POST JSON (vacío = solo genera el JSON)
+         data-numero-inicial="0": la pregunta de género queda como 0 y la numeración
+         sigue la del cuestionario en PDF (P1 a P29, con 7.1, 23.1, 25.1 y 27.1).
+         Los números, el asterisco, la línea de tipo, NS/NC, «Otro» y las
+         justificaciones los agrega js/encuesta.js: acá solo va lo propio de cada pregunta. -->
+    <form class="encuesta" id="encuesta" data-encuesta="clima-laboral-maternidad-kowalk-2026" data-codigo-formulario="FO-SGC-05-IDI.11" data-version="1" data-numero-inicial="0" data-endpoint="" novalidate>
+
+      <!-- ===== BLOQUE 1 · DATOS GENERALES ===== -->
+      <section class="seccion" aria-labelledby="s1-titulo">
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 1</span>
+          <h2 class="titulo-l" id="s1-titulo">Datos generales</h2>
+          <p>Respuestas cerradas y sin identificación personal. Solo sirven para agrupar las respuestas: ningún grupo con menos de 5 respuestas se publica por separado.</p>
+        </div>
+
+        <fieldset class="pregunta" data-sin-extras data-requerida>
+          <legend>Área en la que trabaja</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="p01_area" value="administracion"> Administración y Recepción</label>
+            <label class="opcion"><input type="radio" name="p01_area" value="medicos"> Servicios Médicos y Consultorios <span class="texto-suave">(Pediatría, Ginecología, Obstetricia, Nutrición, Fonoaudiología)</span></label>
+            <label class="opcion"><input type="radio" name="p01_area" value="psicosociales"> Servicios Psicosociales <span class="texto-suave">(Psicología, Psicología Perinatal, Trabajo Social)</span></label>
+            <label class="opcion"><input type="radio" name="p01_area" value="enfermeria"> Enfermería</label>
+            <label class="opcion"><input type="radio" name="p01_area" value="diagnostico"> Diagnóstico y Apoyo Clínico <span class="texto-suave">(Diagnóstico por Imágenes, Farmacia)</span></label>
+            <label class="opcion"><input type="radio" name="p01_area" value="apoyo_logistica"> Servicios de Apoyo y Logística <span class="texto-suave">(Limpieza, Lavandería, Costura, Cocina, Mantenimiento)</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-requerida>
+          <legend>Modalidad de contratación</legend>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="planta_fundacion"> Planta Fundación</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="planta_municipal"> Planta permanente municipal</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="contratado_municipal"> Contratado municipal</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="locacion_municipal"> Locación de servicios municipal</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="locacion_fundacion"> Locación de servicios Fundación</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="cooperativa"> Cooperativa</label>
+            <label class="opcion"><input type="radio" name="p02_contratacion" value="pasante"> Pasante / Becario</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-requerida>
+          <legend>Antigüedad laboral</legend>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="radio" name="p03_antiguedad" value="menos_1"> Menos de 1 año</label>
+            <label class="opcion"><input type="radio" name="p03_antiguedad" value="1_5"> 1 a 5 años</label>
+            <label class="opcion"><input type="radio" name="p03_antiguedad" value="6_10"> 6 a 10 años</label>
+            <label class="opcion"><input type="radio" name="p03_antiguedad" value="mas_10"> Más de 10 años</label>
+          </div>
+        </fieldset>
+
+        <!-- Si en P1 eligió «Servicios de Apoyo y Logística», js/maternidad.js preselecciona «Maestranza» (se puede cambiar) -->
+        <fieldset class="pregunta" data-sin-extras data-requerida>
+          <legend>Labor que desempeña</legend>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="radio" name="p04_labor" value="jerarquico"> Jerárquico</label>
+            <label class="opcion"><input type="radio" name="p04_labor" value="administrativo"> Administrativo</label>
+            <label class="opcion"><input type="radio" name="p04_labor" value="profesional"> Profesional</label>
+            <label class="opcion"><input type="radio" name="p04_labor" value="tecnico"> Técnico</label>
+            <label class="opcion"><input type="radio" name="p04_labor" value="maestranza"> Maestranza</label>
+            <label class="opcion opcion--otro"><input type="radio" name="p04_labor" value="otro"> Otro<input class="campo" type="text" name="p04_labor_otro" data-otro-texto aria-label="Labor que desempeña" placeholder="Labor que desempeña" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-requerida>
+          <legend>¿Está conforme con el área donde trabaja y con las tareas que realiza actualmente?</legend>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="radio" name="p05_conformidad" value="si_ambas"> Sí, conforme con ambas</label>
+            <label class="opcion"><input type="radio" name="p05_conformidad" value="no_area"> No con el área</label>
+            <label class="opcion"><input type="radio" name="p05_conformidad" value="no_tareas"> No con las tareas</label>
+            <label class="opcion"><input type="radio" name="p05_conformidad" value="no_ninguna"> No con ninguna de las dos</label>
+          </div>
+        </fieldset>
+
+        <!-- P6: aparece si P5 es distinta de «Sí, conforme con ambas» -->
+        <fieldset class="pregunta" data-sin-extras data-max="3" data-mostrar-si="p05_conformidad=no_area|no_tareas|no_ninguna" hidden>
+          <legend>¿Qué es lo que más pesa en su disconformidad?</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 3.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="clima_companeros"> Trato y clima con compañeros/as</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="jefatura"> Relación con la jefatura</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="organizacion"> Tareas poco claras, organización y procesos</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="carga"> Carga de trabajo</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="equipamiento"> Falta o mal estado de equipamiento e insumos</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="ropa_epp"> Ropa de trabajo y elementos de protección personal</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="seguridad_higiene"> Condiciones de seguridad e higiene</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="contratacion"> Condiciones de contratación (convenio o modalidad)</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="capacitacion"> Capacitación y oportunidades de desarrollo</label>
+            <label class="opcion"><input type="checkbox" name="p06_disconformidad" value="reconocimiento"> Reconocimiento</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p06_disconformidad" value="otro"> Otro<input class="campo" type="text" name="p06_disconformidad_otro" data-otro-texto aria-label="Qué motiva su disconformidad" placeholder="¿Qué motiva su disconformidad?" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <!-- P7: aparece si P5 es «No con el área» o «No con ninguna de las dos».
+             js/maternidad.js oculta el área elegida en P1. -->
+        <fieldset class="pregunta" data-sin-extras data-mostrar-si="p05_conformidad=no_area|no_ninguna" hidden>
+          <legend>¿En qué área preferiría trabajar?</legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="administracion"> Administración y Recepción</label>
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="medicos"> Servicios Médicos y Consultorios <span class="texto-suave">(Pediatría, Ginecología, Obstetricia, Nutrición, Fonoaudiología)</span></label>
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="psicosociales"> Servicios Psicosociales <span class="texto-suave">(Psicología, Psicología Perinatal, Trabajo Social)</span></label>
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="enfermeria"> Enfermería</label>
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="diagnostico"> Diagnóstico y Apoyo Clínico <span class="texto-suave">(Diagnóstico por Imágenes, Farmacia)</span></label>
+            <label class="opcion"><input type="radio" name="p07_area_preferida" value="apoyo_logistica"> Servicios de Apoyo y Logística <span class="texto-suave">(Limpieza, Lavandería, Costura, Cocina, Mantenimiento)</span></label>
+            <label class="opcion opcion--otro"><input type="radio" name="p07_area_preferida" value="otro"> Otro<input class="campo" type="text" name="p07_area_preferida_otro" data-otro-texto aria-label="En qué área prefiere trabajar" placeholder="¿En qué área prefiere trabajar?" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <div class="pregunta" data-numero="7.1" data-requerida data-sin-extras data-mostrar-si="p05_conformidad=no_area|no_ninguna && p07_area_preferida" hidden>
+          <label class="pregunta__enunciado" for="p07-porque">¿Por qué prefiere dicha área?</label>
+          <p class="pregunta__ayuda">No incluyas nombres ni datos personales.</p>
+          <textarea class="campo" id="p07-porque" name="p07_area_preferida_porque" maxlength="200"></textarea>
+          <div class="contador" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- ===== BLOQUE 2 · AMBIENTE LABORAL ===== -->
+      <section class="seccion" aria-labelledby="s2-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 2</span>
+          <h2 class="titulo-l" id="s2-titulo">Ambiente laboral</h2>
+          <p>Si elegís «Poco conforme» o «Nada conforme», te vamos a pedir que nos cuentes por qué.</p>
+        </div>
+
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p08_ambiente" data-requerida>
+          <legend>En general, ¿cómo me siento con el ambiente laboral?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p09_tareas" data-requerida>
+          <legend>¿Entiendo bien cuáles son mis tareas y responsabilidades?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p10_recursos" data-requerida>
+          <legend>¿Tengo la información, las herramientas y los materiales que necesito para hacer mi trabajo?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p11_jefatura" data-requerida>
+          <legend>¿Recibo apoyo, guía y buen trato de mi jefe o jefa directa?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p12_equipo" data-requerida>
+          <legend>¿Me llevo bien y trabajo en equipo con mis compañeros/as?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p13_seguridad" data-requerida>
+          <legend>¿Las condiciones de seguridad e higiene en mi lugar de trabajo son adecuadas?</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="conformidad" data-nombre="p14_comunicacion" data-requerida>
+          <legend>¿La comunicación con mi jefe o jefa es clara y suficiente?</legend>
+        </fieldset>
+      </section>
+
+      <!-- ===== BLOQUE 3 · MOTIVACIÓN Y COMPROMISO ===== -->
+      <section class="seccion" aria-labelledby="s3-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 3</span>
+          <h2 class="titulo-l" id="s3-titulo">Motivación y compromiso</h2>
+          <p>Si elegís «En desacuerdo» o «Totalmente en desacuerdo», te vamos a pedir que nos cuentes por qué.</p>
+        </div>
+
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p15_derechos" data-requerida>
+          <legend>Conozco mis derechos laborales.</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p16_deberes" data-requerida>
+          <legend>Conozco mis deberes y obligaciones en el trabajo.</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p17_compromiso" data-requerida>
+          <legend>Estoy comprometido/a con las metas y objetivos de mi área.</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p18_uso_recursos" data-requerida>
+          <legend>Uso bien los recursos disponibles (tiempo, herramientas).</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p19_motivacion" data-requerida>
+          <legend>Estoy motivado/a para realizar mis tareas diarias.</legend>
+        </fieldset>
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p20_valoracion" data-requerida>
+          <legend>Me siento valorado/a por mi aporte al equipo.</legend>
+        </fieldset>
+      </section>
+
+      <!-- ===== BLOQUE 4 · CAPACITACIÓN Y DESARROLLO ===== -->
+      <section class="seccion" aria-labelledby="s4-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 4</span>
+          <h2 class="titulo-l" id="s4-titulo">Capacitación y desarrollo</h2>
+        </div>
+
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="satisfaccion" data-nombre="p21_capacitacion" data-requerida>
+          <legend>¿Qué tan satisfecho/a está con las oportunidades de capacitación relacionadas con su tarea?</legend>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-requerida data-max="3">
+          <legend>Capacitaciones que considera necesarias para mejorar su tarea diaria</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 3.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="informatica_basica"> Herramientas básicas informáticas (Excel, Word, Google Sheets, etc.)</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="informatica_avanzada"> Herramientas avanzadas informáticas (Power BI, Looker Studio, Inteligencia Artificial, etc.)</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="procesos_admin"> Procesos administrativos y de gestión hospitalaria</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="normativa"> Normativa legal y reglamentaria sanitaria vigente</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="rcp"> RCP – Primeros auxilios</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="riesgos"> Prevención de riesgos laborales</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="liderazgo"> Liderazgo y gestión de equipos</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="fortalecimiento"> Talleres de fortalecimiento personal y trabajo colaborativo</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="comunicacion"> Comunicación productiva en equipos</label>
+            <label class="opcion"><input type="checkbox" name="p22_capacitaciones" value="educacion_emocional"> Educación emocional en contextos de alta exigencia</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p22_capacitaciones" value="otro"> Otro<input class="campo" type="text" name="p22_capacitaciones_otro" data-otro-texto aria-label="Qué capacitación le gustaría realizar" placeholder="¿Qué capacitación le gustaría realizar?" maxlength="100"></label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- ===== BLOQUE 5 · PROCESOS, RECURSOS Y HERRAMIENTAS ===== -->
+      <section class="seccion" aria-labelledby="s5-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 5</span>
+          <h2 class="titulo-l" id="s5-titulo">Procesos, recursos y herramientas</h2>
+        </div>
+
+        <!-- P23: matriz de acuerdo. data-sin-extras: solo las opciones del PDF
+             (con «No me corresponde / no lo uso»), sin NS/NC ni fila «Otro». -->
+        <div class="pregunta matriz-pregunta" data-nombre="p23" data-requerida data-sin-extras role="group" aria-labelledby="p23-enunciado">
+          <p class="pregunta__enunciado" id="p23-enunciado">Recibo en tiempo y forma, y en buen estado, lo necesario para mis tareas:</p>
+          <p class="pregunta__ayuda">1 = Totalmente en desacuerdo · 5 = Totalmente de acuerdo</p>
+          <div class="matriz-envoltura">
+            <table class="matriz">
+              <thead><tr><th scope="col"><span class="texto-chico">Elemento</span></th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">No me corresponde / no lo uso</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">a) Equipamiento y mobiliario <span class="texto-suave">(médico, informático, de oficina)</span></th>
+                  <td><input type="radio" name="p23a_equipamiento" value="1" aria-label="Equipamiento y mobiliario: 1"></td><td><input type="radio" name="p23a_equipamiento" value="2" aria-label="Equipamiento y mobiliario: 2"></td><td><input type="radio" name="p23a_equipamiento" value="3" aria-label="Equipamiento y mobiliario: 3"></td><td><input type="radio" name="p23a_equipamiento" value="4" aria-label="Equipamiento y mobiliario: 4"></td><td><input type="radio" name="p23a_equipamiento" value="5" aria-label="Equipamiento y mobiliario: 5"></td><td><input type="radio" name="p23a_equipamiento" value="no_corresponde" aria-label="Equipamiento y mobiliario: no me corresponde"></td></tr>
+                <tr><th scope="row">b) Insumos y materiales <span class="texto-suave">(médicos, de farmacia, limpieza, cocina, otros)</span></th>
+                  <td><input type="radio" name="p23b_insumos" value="1" aria-label="Insumos y materiales: 1"></td><td><input type="radio" name="p23b_insumos" value="2" aria-label="Insumos y materiales: 2"></td><td><input type="radio" name="p23b_insumos" value="3" aria-label="Insumos y materiales: 3"></td><td><input type="radio" name="p23b_insumos" value="4" aria-label="Insumos y materiales: 4"></td><td><input type="radio" name="p23b_insumos" value="5" aria-label="Insumos y materiales: 5"></td><td><input type="radio" name="p23b_insumos" value="no_corresponde" aria-label="Insumos y materiales: no me corresponde"></td></tr>
+                <tr><th scope="row">c) Ropa de trabajo y elementos de protección personal</th>
+                  <td><input type="radio" name="p23c_ropa" value="1" aria-label="Ropa de trabajo y protección personal: 1"></td><td><input type="radio" name="p23c_ropa" value="2" aria-label="Ropa de trabajo y protección personal: 2"></td><td><input type="radio" name="p23c_ropa" value="3" aria-label="Ropa de trabajo y protección personal: 3"></td><td><input type="radio" name="p23c_ropa" value="4" aria-label="Ropa de trabajo y protección personal: 4"></td><td><input type="radio" name="p23c_ropa" value="5" aria-label="Ropa de trabajo y protección personal: 5"></td><td><input type="radio" name="p23c_ropa" value="no_corresponde" aria-label="Ropa de trabajo y protección personal: no me corresponde"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- P23.1: una por cada fila de P23 contestada con 1 o 2 -->
+        <fieldset class="pregunta" data-sin-extras data-numero="23.1a" data-max="2" data-mostrar-si="p23a_equipamiento=1|2" hidden>
+          <legend>¿Qué es lo que falla con el equipamiento y mobiliario?</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 2.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="no_hay"> No hay o faltan</label>
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="tarde"> Llegan tarde</label>
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="mal_estado"> Están en mal estado</label>
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="no_adecuados"> No son los adecuados para la tarea</label>
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="no_se_pedir"> No sé a quién pedirlos o cómo hacerlo</label>
+            <label class="opcion"><input type="checkbox" name="p23a_falla" value="sin_respuesta"> Hago el pedido y no me responden</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p23a_falla" value="otro"> Otro<input class="campo" type="text" name="p23a_falla_otro" data-otro-texto aria-label="Motivo de desacuerdo" placeholder="Motivo de desacuerdo" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-numero="23.1b" data-max="2" data-mostrar-si="p23b_insumos=1|2" hidden>
+          <legend>¿Qué es lo que falla con los insumos y materiales?</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 2.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="no_hay"> No hay o faltan</label>
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="tarde"> Llegan tarde</label>
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="mal_estado"> Están en mal estado</label>
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="no_adecuados"> No son los adecuados para la tarea</label>
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="no_se_pedir"> No sé a quién pedirlos o cómo hacerlo</label>
+            <label class="opcion"><input type="checkbox" name="p23b_falla" value="sin_respuesta"> Hago el pedido y no me responden</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p23b_falla" value="otro"> Otro<input class="campo" type="text" name="p23b_falla_otro" data-otro-texto aria-label="Motivo de desacuerdo" placeholder="Motivo de desacuerdo" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-numero="23.1c" data-max="2" data-mostrar-si="p23c_ropa=1|2" hidden>
+          <legend>¿Qué es lo que falla con la ropa de trabajo y los elementos de protección personal?</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 2.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="no_hay"> No hay o faltan</label>
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="tarde"> Llegan tarde</label>
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="mal_estado"> Están en mal estado</label>
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="no_adecuados"> No son los adecuados para la tarea</label>
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="no_se_pedir"> No sé a quién pedirlos o cómo hacerlo</label>
+            <label class="opcion"><input type="checkbox" name="p23c_falla" value="sin_respuesta"> Hago el pedido y no me responden</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p23c_falla" value="otro"> Otro<input class="campo" type="text" name="p23c_falla_otro" data-otro-texto aria-label="Motivo de desacuerdo" placeholder="Motivo de desacuerdo" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <!-- P24: matriz de selección única, mismas filas que P23. «No sé» se guarda como ns_nc. -->
+        <div class="pregunta matriz-pregunta" data-numero="24" data-nombre="p24" data-requerida data-sin-extras role="group" aria-labelledby="p24-enunciado">
+          <p class="pregunta__enunciado" id="p24-enunciado">¿Quién le provee habitualmente cada uno de estos elementos?</p>
+          <div class="matriz-envoltura">
+            <table class="matriz">
+              <thead><tr><th scope="col"><span class="texto-chico">Elemento</span></th><th scope="col">Municipalidad</th><th scope="col">Fundación</th><th scope="col">Ambos</th><th scope="col">Lo resuelvo yo mismo/a</th><th scope="col">No sé</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">a) Equipamiento y mobiliario <span class="texto-suave">(médico, informático, de oficina)</span></th>
+                  <td><input type="radio" name="p24a_equipamiento" value="municipalidad" aria-label="Equipamiento y mobiliario: Municipalidad"></td><td><input type="radio" name="p24a_equipamiento" value="fundacion" aria-label="Equipamiento y mobiliario: Fundación"></td><td><input type="radio" name="p24a_equipamiento" value="ambos" aria-label="Equipamiento y mobiliario: Ambos"></td><td><input type="radio" name="p24a_equipamiento" value="yo_mismo" aria-label="Equipamiento y mobiliario: lo resuelvo yo mismo/a"></td><td><input type="radio" name="p24a_equipamiento" value="ns_nc" aria-label="Equipamiento y mobiliario: no sé"></td></tr>
+                <tr><th scope="row">b) Insumos y materiales <span class="texto-suave">(médicos, de farmacia, limpieza, cocina, otros)</span></th>
+                  <td><input type="radio" name="p24b_insumos" value="municipalidad" aria-label="Insumos y materiales: Municipalidad"></td><td><input type="radio" name="p24b_insumos" value="fundacion" aria-label="Insumos y materiales: Fundación"></td><td><input type="radio" name="p24b_insumos" value="ambos" aria-label="Insumos y materiales: Ambos"></td><td><input type="radio" name="p24b_insumos" value="yo_mismo" aria-label="Insumos y materiales: lo resuelvo yo mismo/a"></td><td><input type="radio" name="p24b_insumos" value="ns_nc" aria-label="Insumos y materiales: no sé"></td></tr>
+                <tr><th scope="row">c) Ropa de trabajo y elementos de protección personal</th>
+                  <td><input type="radio" name="p24c_ropa" value="municipalidad" aria-label="Ropa de trabajo y protección personal: Municipalidad"></td><td><input type="radio" name="p24c_ropa" value="fundacion" aria-label="Ropa de trabajo y protección personal: Fundación"></td><td><input type="radio" name="p24c_ropa" value="ambos" aria-label="Ropa de trabajo y protección personal: Ambos"></td><td><input type="radio" name="p24c_ropa" value="yo_mismo" aria-label="Ropa de trabajo y protección personal: lo resuelvo yo mismo/a"></td><td><input type="radio" name="p24c_ropa" value="ns_nc" aria-label="Ropa de trabajo y protección personal: no sé"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- P25: sin justificación automática, porque la reemplaza P25.1 -->
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="acuerdo_total" data-nombre="p25_procedimientos" data-requerida data-sin-justificacion>
+          <legend>Los procedimientos de trabajo de mi sector están claros y se respetan.</legend>
+        </fieldset>
+
+        <fieldset class="pregunta" data-sin-extras data-numero="25.1" data-max="2" data-mostrar-si="p25_procedimientos=1|2" hidden>
+          <legend>¿Qué es lo que más pesa en que los procedimientos no estén claros o no se respeten?</legend>
+          <p class="pregunta__ayuda">Podés marcar hasta 2.</p>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="no_escritos"> No están escritos o no los conozco</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="confusos"> Son confusos o difíciles de cumplir</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="cambian"> Cambian seguido y no se avisa</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="distinto"> Cada jefe o compañero los aplica distinto</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="sin_control"> No se controla que se cumplan</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="algunos"> Algunos los respetan y otros no</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="muchos_pasos"> Tienen demasiados pasos o trámites que demoran el trabajo</label>
+            <label class="opcion"><input type="checkbox" name="p25_motivos" value="sin_capacitacion"> No recibí capacitación sobre cómo hacerlo</label>
+            <label class="opcion opcion--otro"><input type="checkbox" name="p25_motivos" value="otro"> Otro<input class="campo" type="text" name="p25_motivos_otro" data-otro-texto aria-label="Motivo" placeholder="Motivo" maxlength="100"></label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- ===== BLOQUE 6 · VALORACIÓN GLOBAL Y RECOMENDACIÓN (eNPS) ===== -->
+      <section class="seccion" aria-labelledby="s6-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 6</span>
+          <h2 class="titulo-l" id="s6-titulo">Valoración global y recomendación</h2>
+        </div>
+
+        <!-- P26 y P27 sin justificación automática: la reemplazan P27.1 y P28 -->
+        <fieldset class="pregunta" data-sin-extras data-tipo="likert" data-escala="satisfaccion" data-nombre="p26_satisfaccion" data-requerida data-sin-justificacion>
+          <legend>En general, ¿qué tan satisfecho/a está con su lugar de trabajo hoy?</legend>
+        </fieldset>
+
+        <!-- eNPS de 1 a 10: detractores 1 a 6 · neutros 7 y 8 · promotores 9 y 10 -->
+        <fieldset class="pregunta" data-sin-extras data-tipo="enps" data-nombre="p27_enps" data-desde="1" data-requerida data-sin-justificacion>
+          <legend>¿Recomendaría trabajar en su área a un conocido?</legend>
+        </fieldset>
+
+        <!-- P27.1 y P28: aparecen si P26 es 1, 2 o 3, o si P27 es 6 o menos -->
+        <fieldset class="pregunta" data-sin-extras data-numero="27.1" data-requerida data-mostrar-si="p26_satisfaccion=1|2|3 || p27_enps=1|2|3|4|5|6" hidden>
+          <legend>¿Qué fue lo que más pesó en su valoración?</legend>
+          <div class="opciones opciones--2col">
+            <label class="opcion"><input type="radio" name="p27_motivo" value="clima_companeros"> Trato y clima con compañeros/as</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="jefatura"> Relación con la jefatura</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="organizacion"> Tareas poco claras, organización y procesos</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="carga"> Carga de trabajo</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="equipamiento"> Falta o mal estado de equipamiento e insumos</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="ropa_epp"> Ropa de trabajo y elementos de protección personal</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="seguridad_higiene"> Condiciones de seguridad e higiene</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="contratacion"> Condiciones de contratación (convenio o modalidad)</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="capacitacion"> Capacitación y oportunidades de desarrollo</label>
+            <label class="opcion"><input type="radio" name="p27_motivo" value="reconocimiento"> Reconocimiento</label>
+            <label class="opcion opcion--otro"><input type="radio" name="p27_motivo" value="otro"> Otro<input class="campo" type="text" name="p27_motivo_otro" data-otro-texto aria-label="Motivo de su valoración" placeholder="Motivo de su valoración" maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <div class="pregunta" data-sin-extras data-numero="28" data-requerida data-mostrar-si="p26_satisfaccion=1|2|3 || p27_enps=1|2|3|4|5|6" hidden>
+          <label class="pregunta__enunciado" for="p28">Cuéntenos brevemente qué cambiaría</label>
+          <p class="pregunta__ayuda" id="p28-ayuda">No incluyas nombres ni datos personales: si los escribís por error, se ocultan antes de guardarse.</p>
+          <textarea class="campo" id="p28" name="p28_cambios" maxlength="500" placeholder="Escribí tu comentario aquí" aria-describedby="p28-ayuda"></textarea>
+          <div class="contador" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- ===== BLOQUE 7 · COMENTARIO FINAL ===== -->
+      <section class="seccion" aria-labelledby="s7-titulo" hidden>
+        <div class="seccion__encabezado">
+          <span class="seccion__numero">Bloque 7</span>
+          <h2 class="titulo-l" id="s7-titulo">Comentario final</h2>
+        </div>
+
+        <div class="pregunta" data-sin-extras data-numero="29">
+          <label class="pregunta__enunciado" for="p29">Escriba de modo simple sus observaciones o sugerencias para mejorar su lugar de trabajo. Puede incluir lo que funciona bien y debería seguir igual, y lo que cambiaría (por ejemplo: condiciones del lugar, trato entre compañeros, recursos, organización, etc.).</label>
+          <p class="pregunta__ayuda" id="p29-ayuda">No incluyas nombres ni datos personales: si los escribís por error, se ocultan antes de guardarse.</p>
+          <textarea class="campo" id="p29" name="p29_comentarios" maxlength="1000" placeholder="Escribí tu comentario o sugerencia aquí (opcional)" aria-describedby="p29-ayuda"></textarea>
+          <div class="contador" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <div class="aviso aviso--grave" id="aviso-error" role="alert" hidden>
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17q.43 0 .71-.29T13 16t-.29-.71T12 15t-.71.29T11 16t.29.71T12 17m-1-4h2V7h-2zm1 9q-2.07 0-3.9-.79t-3.17-2.14T2.79 15.9T2 12t.79-3.9t2.14-3.17T8.1 2.79T12 2t3.9.79t3.17 2.14t2.14 3.17T22 12t-.79 3.9t-2.14 3.17t-3.17 2.14T12 22"/></svg>
+        <div>
+          <p class="aviso__titulo">No pudimos enviar tus respuestas</p>
+          <p>Revisá tu conexión y volvé a intentar. Tus respuestas siguen guardadas en este dispositivo.</p>
+        </div>
+      </div>
+
+      <!-- ===== NAVEGACIÓN ===== -->
+      <div class="navegacion">
+        <button type="button" class="boton boton--secundario" data-accion="anterior" hidden>← Anterior</button>
+        <span class="guardado" aria-live="polite"></span>
+        <div class="navegacion__derecha">
+          <button type="button" class="boton boton--primario" data-accion="siguiente">Siguiente →</button>
+          <button type="submit" class="boton boton--primario" data-accion="enviar" hidden>Enviar respuestas</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- ============ PANTALLA FINAL ============ -->
+    <section class="seccion final" id="final" hidden aria-labelledby="final-titulo">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.07 0-3.9-.79t-3.17-2.14T2.79 15.9T2 12t.79-3.9t2.14-3.17T8.1 2.79T12 2t3.9.79t3.17 2.14t2.14 3.17T22 12t-.79 3.9t-2.14 3.17t-3.17 2.14T12 22"/></svg>
+      <h2 class="titulo-l" id="final-titulo" tabindex="-1">¡Gracias por participar!</h2>
+      <p>Recibimos tus respuestas.</p>
+      <p class="texto-chico">Código de respuesta: <span class="codigo-respuesta" data-codigo>—</span></p>
+    </section>
+
+    <!-- ============ MODAL: PROTOCOLO DE ANONIMATO ============ -->
+    <dialog class="modal" id="protocolo" aria-labelledby="protocolo-titulo">
+      <div class="modal__interior">
+        <div class="modal__cabecera">
+          <h2 class="modal__titulo" id="protocolo-titulo">
+            <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10c-4-1.5-7-5.5-7-10V6z"/><rect x="9.5" y="11" width="5" height="4" rx="1"/><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/></svg>
+            Protocolo de Anonimato Técnico y Estadístico
+          </h2>
+          <button type="button" class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <p>En cumplimiento del diseño metodológico de la <strong>Dirección General de Estadísticas, Control de Calidad y Procesos</strong>, este instrumento aplica cinco salvaguardas técnicas:</p>
+        <ul>
+          <li><strong>Sin datos identificatorios:</strong> no se solicita nombre, DNI, legajo ni correo electrónico.</li>
+          <li><strong>Sin registro de IP ni metadatos:</strong> el repositorio descarta direcciones IP y huellas del navegador.</li>
+          <li><strong>Sello temporal redondeado a la hora:</strong> la marca de tiempo se trunca a la hora en punto (<code>HH:00:00</code>) para evitar la trazabilidad por minuto exacto.</li>
+          <li><strong>Regla de los 5 casos (<em>k</em>-anonimato <em>n</em> ≥ 5):</strong> ningún cruce por área, modalidad o antigüedad se publica si cuenta con menos de 5 respuestas.</li>
+          <li><strong>Sanitización automática de texto libre:</strong> cualquier número de documento o correo ingresado accidentalmente en los comentarios abiertos se enmascara antes de guardarse.</li>
+        </ul>
+        <div class="modal__pie">
+          <button type="button" class="boton boton--primario" data-cerrar-modal>Entendido</button>
+        </div>
+      </div>
+    </dialog>
+    <!-- ============ MODAL: DECRETO 1681/2023 · POLÍTICA DE CALIDAD ============
+         Transcripción del decreto con las firmas digitalizadas de los firmantes.
+         Original escaneado: assets/docs/decreto-1681-2023.pdf -->
+    <dialog class="modal modal--norma" id="decreto-1681" aria-labelledby="decreto-1681-titulo">
+      <div class="modal__interior">
+        <div class="modal__cabecera modal__cabecera--fija">
+          <p class="modal__etiqueta">Decreto N° 1681/2023 · Política de Calidad</p>
+          <button type="button" class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <article class="norma">
+          <header class="norma__membrete">
+            <img class="norma__escudo" src="assets/img/escudo-ciudad.png" alt="Escudo de la Ciudad de Río Cuarto">
+            <p class="norma__organismo">Municipalidad de la Ciudad de Río Cuarto</p>
+            <p class="norma__lema">"Las Islas Malvinas, Georgias del Sur y Sandwich del Sur son argentinas"</p>
+            <h2 class="norma__numero" id="decreto-1681-titulo">Decreto N° 1681/2023</h2>
+            <p class="norma__fecha">Río Cuarto, 21 de marzo de 2023</p>
+          </header>
+
+          <h3 class="norma__apartado">Visto:</h3>
+          <p>La decisión del Gobierno Municipal de establecer su Política de Calidad con el objetivo central del fortalecimiento, transparencia y la transformación institucional.</p>
+
+          <h3 class="norma__apartado">Y considerando:</h3>
+          <p>Que la COM en su Preámbulo establece como objetivos …<em>"defender el pleno respeto de los derechos humanos, exaltar los valores de la solidaridad, la equidad y la justicia social, favorecer el libre acceso a la salud, la educación y la cultura, preservar el ambiente y el patrimonio histórico y cultural de la ciudad, procurar el desarrollo armónico de la urbe y la ejecución de actividades económicas al servicio del bien común, promover la participación de todos los vecinos, fortalecer sus capacidades y determinar obligaciones considerando al Hombre, a la Familia y a la comunidad como bases fundamentales del accionar municipal….."</em></p>
+          <p>Que la adhesión a los Objetivos de Desarrollo Sostenible de la ONU dispuesta por la Ordenanza N° 148/2021 constituyó una oportunidad para que el Municipio estructure sus acciones en función de objetivos, metas concretas y realizables, de acuerdo a sus prioridades socioeconómicas y ambientales, como así también abordando los problemas e involucrando a los actores de la sociedad civil y del sector privado.</p>
+          <p>Que la preocupación por la calidad en el sector público se ha plasmado en toda Latinoamérica, en las Cartas de los Ciudadanos, donde las autoridades públicas establecen estándares del servicio que van a cumplir y plasman por escrito el compromiso a asumir frente a la ciudadanía.</p>
+          <p>Que uno de los objetivos prioritarios del Gobierno Municipal en materia de gestión administrativa, es potenciar la transparencia y receptividad del Estado hacia los ciudadanos, optimizando el uso de los recursos humanos y materiales que ellos financian a través del cumplimiento de sus obligaciones tributarias.</p>
+          <p>Que para ello, debe comprometerse a la totalidad de las dependencias de la Administración Pública Municipal a fin de lograr la efectiva satisfacción del ciudadano, teniendo en cuenta que detrás de cada trámite hay una necesidad o un derecho, y que toda demora ocasiona un perjuicio.</p>
+          <p>Que la modalidad de gestión del Municipio debe permitir un efectivo control social a través del suministro de información clara, precisa y comprensible para todos los ciudadanos, sobre el uso de los fondos públicos y sobre la atención que deben recibir y exigir en particular de cada servicio brindado por la Administración Pública Municipal.</p>
+          <p>Que es conveniente y necesario contar con un sistema articulado de información y seguimiento de la relación de los organismos públicos con los usuarios y beneficiarios de los servicios que brinda la Administración Pública Municipal, buscando transparentar su desempeño y rindiendo cuenta periódicamente del nivel de prestación alcanzado a través de estándares de calidad de servicio.</p>
+          <p>Que es importante rescatar, incorporar y potenciar, las iniciativas desarrolladas para la medición de la calidad en la prestación de los servicios a los ciudadanos y su posterior difusión pública.</p>
+          <p>Que la gestión pública del Municipio respalda la adopción de la Gestión de la Calidad, como una política pública que busca mejorar las prácticas propias de la administración gubernamental, fomentando la implementación de diversas herramientas afines.</p>
+          <p>Que la Gestión de la Calidad es una herramienta integral, que tiene como objetivo principal mejorar la relación de la administración pública con los ciudadanos, especialmente a través de la calidad de los servicios que brinda y en las premisas de Gobierno Abierto, siendo una estrategia que vincula la demanda de la sociedad con los resultados esperados del gobierno, empleando mecanismos caracterizados por un mayor grado de cooperación y de interacción entre el Estado y los ciudadanos.</p>
+          <p>Que este gobierno se encuentra trabajando en la certificación de procesos de calidad basados en normas internacionales de estandarización (ISO), lo que puede traducirse en el reconocimiento a la Gestión de la Calidad.</p>
+          <p>Que en el ámbito público, la calidad debe vincularse con buenos resultados, con procesos transparentes, responsabilidades compartidas, productividad, trabajo en equipo, y continúo mejoramiento en el desempeño y servicio al usuario.</p>
+          <p>Por ello;</p>
+
+          <p class="norma__decreta">El Intendente Municipal<br><span>Decreta:</span></p>
+
+          <p><strong>Artículo 1°.-</strong> ESTABLÉCESE la Política de Calidad de la Municipalidad de la Ciudad de Río Cuarto, de acuerdo con el Anexo Único que forma parte integrante de la presente.</p>
+          <p><strong>Artículo 2°.-</strong> Comprométase a todas las Secretarías y dependencias integrantes de la Estructura Funcional del Municipio a instrumentar y disponer los medios y acciones que resulten necesarias en pos de dar cumplimiento a lo dispuesto en el presente.</p>
+          <p><strong>Artículo 3°.-</strong> Instrúyase a la Secretaría de Economía para llevar a cabo las acciones vinculadas con la implementación, el mantenimiento y desarrollo del Sistema de Gestión de Calidad, actuando como órgano transversal soporte de calidad para todo el Municipio.</p>
+          <p><strong>Artículo 4°.-</strong> Invítase a los demás poderes y entes integrantes del Sector Público Municipal a adherir al presente.</p>
+          <p><strong>Artículo 5°.-</strong> Protocolícese, comuníquese, notifíquese, tómese razón por las reparticiones correspondientes, dése al R.M. y archívese.</p>
+
+          <div class="norma__firmantes">
+            <figure class="norma__firmante">
+              <img class="norma__firma" src="assets/img/firma-antonetti.png" alt="Firma del Cdor. Pablo J. Antonetti">
+              <figcaption><strong>Cdor. Pablo J. Antonetti</strong><br>Secretario de Economía</figcaption>
+            </figure>
+            <figure class="norma__firmante">
+              <img class="norma__firma" src="assets/img/firma-llamosas.png" alt="Firma del Abg. Juan Manuel Llamosas">
+              <figcaption><strong>Abg. Juan Manuel Llamosas</strong><br>Intendente Municipal</figcaption>
+            </figure>
+          </div>
+
+          <section class="norma__anexo" aria-labelledby="decreto-1681-anexo">
+            <h3 class="norma__numero" id="decreto-1681-anexo">Anexo Único</h3>
+            <p class="norma__subtitulo">Política de Calidad Municipalidad de Río Cuarto</p>
+            <p>La Municipalidad de Río Cuarto establece su Política de Calidad con el objetivo central de avanzar en el fortalecimiento, transparencia y transformación Institucional.</p>
+            <p>Para ello, trabaja en un modelo de ciudad sostenible, que sea reconocida por su justicia social, el desarrollo integral de las personas y el crecimiento productivo a través de políticas públicas innovadoras, participativas y transparentes. Convencidos de que este es el camino correcto, asumimos el compromiso de implementar, mantener y mejorar un Sistema de Gestión de la Calidad, de acuerdo a los requisitos aplicables bajo los siguientes ejes:</p>
+            <ul>
+              <li>Promover la digitalización, simplificación y la transparencia mediante la rendición de cuentas y el gobierno abierto, a fin de optimizar los procesos internos, haciendo un uso adecuado de los recursos.</li>
+              <li>Impulsar programas de gestión que favorezcan el desarrollo económico y social, la prevención y el cuidado de la salud, la educación y la protección de los derechos humanos, asegurando el desarrollo sostenible y el cuidado del medio ambiente.</li>
+              <li>Promover el trabajo colectivo y colaborativo, las articulaciones multinivel, potenciando el crecimiento del capital humano, generando oportunidades de aprendizaje de manera constante.</li>
+              <li>Avanzar en el diseño de políticas públicas basadas en evidencia e información para una mejor toma de decisiones en beneficio del ciudadano.</li>
+              <li>Desarrollar Políticas Públicas económicas municipales, de interés general de la ciudadanía, avanzando en los ODS, sustentabilidad y participación ciudadana.</li>
+            </ul>
+            <p>La Municipalidad de Río Cuarto, a partir de la implementación, mantenimiento y mejora de su Sistema de Gestión de la Calidad, se compromete a impulsar e instrumentar la mejora continua como herramienta de gestión, de acuerdo a los requisitos aplicables, diseñando políticas públicas basadas en evidencia e información para una mejor toma de decisiones en beneficio del ciudadano y el fortalecimiento institucional.</p>
+          </section>
+        </article>
+
+        <div class="modal__pie modal__pie--norma">
+          <a class="boton boton--secundario" data-enlace-pdf href="assets/docs/decreto-1681-2023.pdf" target="_blank" rel="noopener">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 12.5h1v-2h1q.425 0 .713-.288T12 9.5v-1q0-.425-.288-.712T11 7.5H9zm1-3v-1h1v1zm3 3h2q.425 0 .713-.288T16 11.5v-3q0-.425-.288-.712T15 7.5h-2zm1-1v-3h1v3zm3 1h1v-2h1v-1h-1v-1h1v-1h-2zM8 18q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm0-2h12V4H8zm-4 6q-.825 0-1.412-.587T2 20V6h2v14h14v2zM8 4v12z"/></svg>
+            Ver documento original (PDF)
+          </a>
+          <button type="button" class="boton boton--primario" data-cerrar-modal>Entendido</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ MODAL: RÍO CUARTO IA · DECLARACIÓN DE USO DE IA ============ -->
+    <dialog class="modal modal--ia" id="rio-cuarto-ia" aria-labelledby="rio-cuarto-ia-titulo">
+      <div class="modal__interior">
+        <div class="modal__cabecera">
+          <h2 class="modal__titulo" id="rio-cuarto-ia-titulo">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm-7.5.5L9 4L6.5 9.5L1 12l5.5 2.5L9 20l2.5-5.5L17 12zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25z"/></svg>
+            Río Cuarto IA
+          </h2>
+          <button type="button" class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <h3 class="modal__subtitulo">Declaración de uso de Inteligencia Artificial</h3>
+        <p>El desarrollo de la presente encuesta contó con el apoyo de herramientas de inteligencia artificial generativa (GenAI) —proveedor: Anthropic; herramienta: Claude Code; lenguaje de programación: HTML, CSS y JavaScript; modelo: Claude Opus 5.5— para asistir en el diseño del formulario web: la adaptación del cuestionario FO-SGC-05-IDI.11 a la plantilla de encuestas del sistema de diseño oficial, la programación de las preguntas condicionales y la verificación de su funcionamiento. La elaboración del cuestionario, la definición de las preguntas, las escalas y los criterios metodológicos, y la validación final del instrumento estuvieron a cargo del equipo técnico de la Dirección de Estadística, Control de Calidad y Procesos.</p>
+        <p>Los contenidos generados o asistidos por la herramienta fueron revisados, verificados y, cuando correspondió, modificados por los autores. Los autores asumen plena responsabilidad por el contenido final del trabajo.</p>
+        <div class="modal__pie">
+          <button type="button" class="boton boton--primario" data-cerrar-modal>Entendido</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ MODAL: RÍO CUARTO ODS · OBJETIVOS DE DESARROLLO SOSTENIBLE ============
+         Íconos oficiales en español de la ONU (un.org/sustainabledevelopment/es), en assets/img/ods/ -->
+    <dialog class="modal modal--ods" id="rio-cuarto-ods" aria-labelledby="rio-cuarto-ods-titulo">
+      <div class="modal__interior">
+        <div class="modal__cabecera">
+          <h2 class="modal__titulo" id="rio-cuarto-ods-titulo">
+            <img class="modal__rueda" src="assets/img/ods/ods-rueda.png" alt="" width="28" height="28">
+            Río Cuarto ODS
+          </h2>
+          <button type="button" class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <p>Esta encuesta contribuye al seguimiento de los siguientes Objetivos de Desarrollo Sostenible (ODS) de la Agenda 2030, en cumplimiento de la <a class="enlace-ordenanza" href="https://drive.google.com/file/d/1-JUX_knfakCrvlmDB0gHUXXLpbqkpIaY/view?usp=sharing" target="_blank" rel="noopener">Ordenanza N° 148/2021</a>:</p>
+        <ul class="ods-grilla">
+          <li><img src="assets/img/ods/ods-03.webp" alt="ODS 3: Salud y bienestar" width="300" height="300"></li>
+          <li><img src="assets/img/ods/ods-04.webp" alt="ODS 4: Educación de calidad" width="300" height="300"></li>
+          <li><img src="assets/img/ods/ods-05.webp" alt="ODS 5: Igualdad de género" width="300" height="300"></li>
+          <li><img src="assets/img/ods/ods-08.webp" alt="ODS 8: Trabajo decente y crecimiento económico" width="300" height="300"></li>
+          <li><img src="assets/img/ods/ods-16.webp" alt="ODS 16: Paz, justicia e instituciones sólidas" width="300" height="300"></li>
+        </ul>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+
+      <div class="pie-fila pie-fila--superior">
+        <div class="pie-escudos">
+          <img src="assets/img/escudo-secretaria.png" alt="Río Cuarto Gobierno — Secretaría de Gestión y Participación Ciudadana">
+          <img src="assets/img/escudo-datos.png" alt="Datos Río Cuarto">
+        </div>
+        <div class="pie-acciones">
+          <!-- Río Cuarto IA abre la declaración de uso de IA; Río Cuarto ODS, los ODS a los que contribuye la encuesta -->
+          <button type="button" class="boton boton--secundario boton--pildora" data-abrir-modal="rio-cuarto-ia">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm-7.5.5L9 4L6.5 9.5L1 12l5.5 2.5L9 20l2.5-5.5L17 12zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25z"/></svg>
+            Río Cuarto IA
+          </button>
+          <button type="button" class="boton boton--secundario boton--pildora" data-abrir-modal="rio-cuarto-ods">
+            <img src="assets/img/ods/ods-rueda.png" alt="" width="20" height="20">
+            Río Cuarto ODS
+          </button>
+        </div>
+      </div>
+
+      <div class="pie-fila pie-fila--inferior">
+        <div class="pie-textos">
+          <p><strong>Elaboración:</strong> Sec. Gestión y Participación Ciudadana · Dir. de Estadística, Control de Calidad y Procesos</p>        </div>
+        <nav class="enlaces-paginas" aria-label="Enlaces legales y del portal">
+          <a href="https://datosabiertos.datosriocuarto.gob.ar/privacidad.html">Política de Privacidad</a>
+          <a href="https://datosabiertos.datosriocuarto.gob.ar/terminos.html">Condiciones del Servicio</a>
+          <a href="sistema-de-diseno.html">Sistema de diseño</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/encuesta.js"></script>
+  <script src="js/maternidad.js"></script>
+</body>
+</html>
