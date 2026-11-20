@@ -1,0 +1,30 @@
+/* ==========================================================================
+   tokens-encuesta.css — Lo que las encuestas suman a css/tokens.css.
+
+   css/tokens.css es el MISMO archivo que el de los tableros (no se toca acá:
+   si cambia allá, se copia). Este archivo solo agrega variables derivadas de
+   aquellas, así que se adaptan solas al modo oscuro.
+   ========================================================================== */
+
+:root {
+  /* Alias con los nombres que usa encuesta.css */
+  --sobre-marca: var(--marca-texto);
+  --radio-chico: var(--radio-sm);
+  --info: var(--marca);
+
+  /* Fondos suaves de estado: misma fórmula que .aviso en componentes.css */
+  --info-fondo:   color-mix(in srgb, var(--marca)  12%, var(--superficie));
+  --ok-fondo:     color-mix(in srgb, var(--ok)     12%, var(--superficie));
+  --alerta-fondo: color-mix(in srgb, var(--alerta) 12%, var(--superficie));
+  --grave-fondo:  color-mix(in srgb, var(--grave)  12%, var(--superficie));
+  --neutro-fondo: color-mix(in srgb, var(--texto-suave) 14%, var(--superficie));
+
+  /* Foco y sombra */
+  --foco: 0 0 0 3px color-mix(in srgb, var(--marca) 45%, transparent);
+  --sombra: 0 1px 2px rgb(20 20 15 / 0.04);
+
+  /* Todo en Google Sans: también códigos y ejemplos (sin monoespaciada) */
+  --fuente-mono: var(--fuente);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) { --sombra: none; } }
+:root[data-tema="oscuro"] { --sombra: none; }
